@@ -1,0 +1,49 @@
+fun main() {
+    println("Hello, world!!!")
+    var rec=Rectangle()
+    rec.calculateArea()
+     var squ=Square()
+    squ.calculateArea()
+var cir=circle()
+    cir.calculateArea()
+}
+
+     
+
+abstract class Shape{
+    var sideCount: Int =0
+    abstract fun calculateArea()
+}
+
+class Rectangle: Shape(){
+    var width: Double =9.2
+    var length: Double = 10.0
+   
+    override
+ 	 fun calculateArea(){
+        println("Area of Rectangle is ${width}*${length}")
+    }
+    
+    
+}
+
+class Square: Shape(){
+    var length: Double =4.4
+    override
+    fun calculateArea(){
+            println("Area of Square is ${length*length}")
+    }
+     
+
+}
+
+class  circle: Shape(){
+    var radius: Double=5.5
+    val pi: Double=3.14
+    override
+    fun calculateArea(){
+        var sideCount:Double=pi*radius*radius
+         println("Area of circle $sideCount")
+
+}
+}
